@@ -1,0 +1,12 @@
+runs/
+assets/checkpoint/
+__pycache__/
+*.pyc
+
+# Keep submission media separate from the research archive.
+video/
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3

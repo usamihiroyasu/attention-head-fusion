@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the associated theory paper when using these research artifacts."
+title: "Exact Fusion of Softmax Attention Heads Can Require Exponentially Many Atoms"
+authors:
+  - family-names: Usami
+    given-names: Hiroyasu
+  - family-names: Hara
+    given-names: Keisuke
+  - family-names: Tsuboi
+    given-names: Ayato
+  - family-names: Matsuda
+    given-names: Naohiko
+version: "local-release-candidate"
+repository-code: "https://github.com/usamihiroyasu/attention-head-fusion"
