@@ -10,5 +10,5 @@ authors:
     given-names: Ayato
   - family-names: Matsuda
     given-names: Naohiko
-version: "local-release-candidate"
+version: "v6.13"
 repository-code: "https://github.com/usamihiroyasu/attention-head-fusion"

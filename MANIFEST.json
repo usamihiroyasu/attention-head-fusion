@@ -5,8 +5,8 @@
       "sha256": "bb2087dbb4903d15d58cb917ac3f0cd598b920e5a6a33f900e3f79ba88f9961b"
     },
     "CITATION.cff": {
-      "bytes": 508,
-      "sha256": "f25619c5390ab270ad3a336bff46180b5760229e5db303475d99ffdf4afb21c5"
+      "bytes": 490,
+      "sha256": "fd2133b52b97768a66879030f05228d15a3d132a3652c285008759eac70a4e85"
     },
     "DATA_ATTRIBUTION.md": {
       "bytes": 1300,
@@ -17,8 +17,8 @@
       "sha256": "8b9a71755c836d7c07d2376192833eb93ed122023d3d28479bfeb7c24bcec94b"
     },
     "README.md": {
-      "bytes": 3578,
-      "sha256": "2c35a536e2dbb57aaea1429cdd74fffd9cf4cb7df19c8f877ac28316bf324b0a"
+      "bytes": 3640,
+      "sha256": "350f33b9b4150b685deda4ee064307f6458eb334435bfeb8bb96ced728f80acc"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 844,
@@ -191,6 +191,10 @@
     "protocol_history/learned/PROTOCOL_AMENDMENT_SVD.json": {
       "bytes": 514,
       "sha256": "cfe3661d549033a409e1272700bb5fc46af3c8ef802004e71b2d82d5275991b0"
+    },
+    "manuscript.pdf": {
+      "bytes": 2588876,
+      "sha256": "54d4947fa831df8306d648ebe1843d3b1a5b14d4273ca082c76501aa5e07994b"
     }
   }
 }
