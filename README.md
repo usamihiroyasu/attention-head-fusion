@@ -26,22 +26,22 @@ python3 certificate/portable_interval_minor17.py --input-npz certificate/certifi
 python3 certificate/verify_stored_rank.py --enclosure runs/proof/replay.json --preconditioner certificate/ROOT_EXACT_RATIONAL_RANK_CHECK.json
 ```
 
-The two expected states are `CERTIFIED_NONZERO_MINOR` and `PASS_EXACT_RATIONAL_RANK17`. This verifies the real-exponential vector map on 17 fixed queries; it is a separate result from the scalar exact-fusion theorem above.
+The two expected states are `CERTIFIED_NONZERO_MINOR` and `PASS_EXACT_RATIONAL_RANK17`. For the 17 fixed queries, the commands use interval and exact rational arithmetic to verify a nonzero minor of the real-exponential map's augmented output matrix.
 
 ## From the paper to the code
 
 | Paper component | Implementation and archived artifacts |
 | --- | --- |
-| Controlled fixed-cache readouts, §VI-A | [`controlled/`](controlled/) — all 36 FP64 method/bank conditions |
+| Controlled fixed-cache readouts, §VI-A | [`controlled/`](controlled/) — code and results for all 36 FP64 conditions |
 | Native targets and scalar identity diagnostic, §VI-B | [`native/`](native/) — capture code, query bank, and reference results |
 | Finite-query vector capacity, §VI-C and Appendix B | [`certificate/`](certificate/) — stored inputs and both verification programs |
-| Learned approximation under equal byte budgets, §VI-D | [`learned/`](learned/) — fitting code, all starts, and frozen selectors |
+| Learned approximation under equal byte budgets, §VI-D | [`learned/`](learned/) — fitting code, all starts, and selection records |
 | Calibration-query coverage, §VI-E | [`calibration/`](calibration/) — the second, disjoint 64-context bank and policy comparison |
 
-[Reproduction instructions](docs/REPRODUCE.md) give the CPU and CUDA workflows. Exact dependencies are recorded in [`environment/`](environment/), external assets in [`assets/ASSETS.json`](assets/ASSETS.json), and frozen protocols in [`protocol_history/`](protocol_history/). Write new runs under `runs/` to preserve reference files.
+The [reproduction guide](docs/REPRODUCE.md) gives commands for the CPU and CUDA experiments. [`environment/`](environment/) lists package versions, [`assets/ASSETS.json`](assets/ASSETS.json) identifies external model files, and [`protocol_history/`](protocol_history/) records the protocols and amendments. Write new runs under `runs/` to preserve reference files.
 
-The archived learned-cache comparisons retain the original mixed rankings: the prespecified two-budget superiority criterion was not met. Compare the complete results across budgets and calibration policies.
+Learned-cache rankings reverse across memory budgets, and approximation errors vary with calibration-query placement. The primary comparison did not meet the prespecified two-budget superiority criterion.
 
 ## Data, citation, and reuse
 
-[CITATION.cff](CITATION.cff) records the manuscript title and authors. [MANIFEST.json](MANIFEST.json) records file hashes. Input banks retain the attribution and CC BY-SA 3.0 conditions in [DATA_ATTRIBUTION.md](DATA_ATTRIBUTION.md); model weights are obtained separately. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE_STATUS.md](LICENSE_STATUS.md) for reuse terms. An author-owned code license has not yet been assigned.
+[CITATION.cff](CITATION.cff) records the manuscript title and authors. [MANIFEST.json](MANIFEST.json) records file hashes. Input banks retain the attribution and CC BY-SA 3.0 conditions in [DATA_ATTRIBUTION.md](DATA_ATTRIBUTION.md); model weights are obtained separately. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE_STATUS.md](LICENSE_STATUS.md) for reuse terms. A reuse license has not been specified for the authors' code.
