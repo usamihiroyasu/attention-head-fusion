@@ -1,0 +1,59 @@
+{
+  "state": "FROZEN_BEFORE_CODE_AND_RUN",
+  "utc": "2026-11-01T05:06:15.232793+00:00",
+  "dimensions": [
+    4,
+    8,
+    12
+  ],
+  "radii": [
+    0.25,
+    1.0,
+    4.0
+  ],
+  "methods": [
+    "native_cube",
+    "block_b2",
+    "coordinate_b1",
+    "mean_fixed2"
+  ],
+  "planned_rows": 36,
+  "query_generation": "For each d, fresh Generator(PCG64(20261101)),512 uniform[-1,1]^d rows Z shared across allR; concatenate all2^d sign corners; multiply byR",
+  "kernel": "Same FP64 batched-head stable weighted softmax: einsum qK, subtract row maximum, exp, normalize, weighted sum across allheads",
+  "materials": "Explicit materialized K[H,M,b] and V[H,M]. native H1,b=d,M2^d; block H=d/2,b2,M4; coordinate Hd,b1,M2; mean H1,b=d,M2,K0/ones_over_d,V0/d. No broadcast views counted as head copies.",
+  "oracle": "sum(1/(1+exp(-q_j))) used outside timed kernel for validation only",
+  "numeric_tolerance": 1e-10,
+  "repetitions": {
+    "warmup": 1,
+    "timed": 5,
+    "summary": "median all5; alltimes retained"
+  },
+  "allocation_boundary": "Build inputs,reshape,K,V,oracle outside timer. Kernel only allocates logits/softmax reductions/output through same generic kernel. Includes einsum planning overhead.",
+  "metrics": [
+    "combined max/mean absoluteerror",
+    "sameerrors divided byd",
+    "logicalH*M head-atom terms",
+    "actualK.nbytes+V.nbytes",
+    "5kernelwalltimes+median",
+    "logit_cells=N*H*M and FP64bytes proxy only"
+  ],
+  "activation_boundary": "Logit-array proxy only; not total peak, measuredRSS or complete operation count",
+  "fixed_baseline_warning": "mean_fixed2=d*sigmoid(mean(q)); not best2atom approximation",
+  "finite_observation_warning": "maxobservederror is not sup_allquery guarantee; no NLP/LLM claims or timing superiority promise",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "runtime": "Python with NumPy 2.4.4; CPU",
+  "supervision": "Root review/admission BEFORElaunch. New process group; outer120s TERM,5sKILL,reap ownprocess only. Privatework O_EXCLlock acquired by child; outer removes only matchinginode/PID afterreap ifchild killed. Allcompletedrows checkpointed; pending rows explicit.",
+  "source_edit": false,
+  "root_ledger_edit": false,
+  "DGX_generation": 0,
+  "model_runs": 0,
+  "timebox_minutes": 8,
+  "weak_signal": "Exact methods disagree numerically beyond1e-10, hidden broadcast storage or kernel timing contamination",
+  "kill": "Deadline/ownership failure; preserve all completed and pending rows; no retry/seedchange",
+  "retained_assets": "Frozen36rowprotocol, compactsource, inputhashes, perrowtimings/errors/bytes/activationproxy"
+}
