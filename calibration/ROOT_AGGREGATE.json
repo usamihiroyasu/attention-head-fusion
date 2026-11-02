@@ -1,0 +1,98 @@
+{
+  "conditions": [
+    {
+      "policy": "early",
+      "n": 4,
+      "separate_macro": 0.49670472855143655,
+      "flat_macro": 0.48085551344645483,
+      "delta_macro": -0.015849215104981697,
+      "delta_median": -0.0012683580556751561,
+      "separate_better": 31,
+      "separate_worst": 1.5183066527358238,
+      "flat_worst": 1.1764373811866506
+    },
+    {
+      "policy": "early",
+      "n": 8,
+      "separate_macro": 0.3644264976262563,
+      "flat_macro": 0.573410771639186,
+      "delta_macro": 0.20898427401292952,
+      "delta_median": 0.12015806035720442,
+      "separate_better": 61,
+      "separate_worst": 0.583912128914144,
+      "flat_worst": 1.6996617003893262
+    },
+    {
+      "policy": "coverage",
+      "n": 4,
+      "separate_macro": 0.4717405330147486,
+      "flat_macro": 0.47106136327912024,
+      "delta_macro": -0.0006791697356283571,
+      "delta_median": 0.018389123000380092,
+      "separate_better": 36,
+      "separate_worst": 0.8585165910890503,
+      "flat_worst": 0.7151195634816783
+    },
+    {
+      "policy": "coverage",
+      "n": 8,
+      "separate_macro": 0.3515326335903869,
+      "flat_macro": 0.4816504709407154,
+      "delta_macro": 0.13011783735032853,
+      "delta_median": 0.08397740911895904,
+      "separate_better": 51,
+      "separate_worst": 0.5537481044127625,
+      "flat_worst": 1.3763131830148305
+    }
+  ],
+  "coverage_minus_early": [
+    {
+      "n": 4,
+      "arm": "separate",
+      "macro": -0.02496419553668795,
+      "median": -0.020096363320537547,
+      "coverage_better": 36
+    },
+    {
+      "n": 4,
+      "arm": "flat",
+      "macro": -0.009794150167334599,
+      "median": -0.006715787506255261,
+      "coverage_better": 35
+    },
+    {
+      "n": 8,
+      "arm": "separate",
+      "macro": -0.012893864035869465,
+      "median": -0.013017362009693029,
+      "coverage_better": 39
+    },
+    {
+      "n": 8,
+      "arm": "flat",
+      "macro": -0.09176030069847049,
+      "median": -0.036915624771403005,
+      "coverage_better": 39
+    }
+  ],
+  "native_capacity": {
+    "early": {
+      "flat16floor_macro": 0.02485727889801216,
+      "min": 0.017732943305658257,
+      "max": 0.032696368916365334,
+      "positive": 64
+    },
+    "coverage": {
+      "flat16floor_macro": 0.025122745157095366,
+      "min": 0.0015717130856394096,
+      "max": 0.03816152541202661,
+      "positive": 64
+    }
+  },
+  "cosine_means": {
+    "early": 0.49159479160893227,
+    "coverage": 0.42403668069482986
+  },
+  "source_sha256": "e909035985163644201243195740e9e08ca7c25dc217d0e6d5f7a015fef4dc0a",
+  "primary_coverage_all4": true
+}
