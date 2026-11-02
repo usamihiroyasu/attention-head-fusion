@@ -17,8 +17,8 @@
       "sha256": "8b9a71755c836d7c07d2376192833eb93ed122023d3d28479bfeb7c24bcec94b"
     },
     "README.md": {
-      "bytes": 2908,
-      "sha256": "655a3e1ebd2e001add751ad250071fb993fdbfd83999326cf9aa784f35f5c85b"
+      "bytes": 3414,
+      "sha256": "047580e39d5b468b3817bcd8f37761b3ac92eb9e944ea0b92258df0ac48cdc49"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 844,
@@ -91,6 +91,14 @@
     "docs/REPRODUCE.md": {
       "bytes": 3868,
       "sha256": "266eeb52a35bb7725528409092a3e8a45e8ea9c51ff2c58277d51392457476bc"
+    },
+    "docs/figures/atom_cost.png": {
+      "bytes": 25946,
+      "sha256": "eccf122a47089043d0eb909fe615d5f00173d475db747a13d5b54acc3a1e789e"
+    },
+    "docs/figures/make_atom_cost.py": {
+      "bytes": 1310,
+      "sha256": "aa1136eed1a515f9032531be0f6adcd66c88cf8545b5cb098a2b9fcb73c4adef"
     },
     "environment/controlled.txt": {
       "bytes": 13,
