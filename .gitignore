@@ -10,3 +10,6 @@ video/
 *.avi
 *.wav
 *.mp3
+
+# Build report written when regenerating the README animation.
+docs/figures/atom_cost_gif_qa.json

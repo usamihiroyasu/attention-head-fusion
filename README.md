@@ -4,7 +4,9 @@ Hiroyasu Usami · Keisuke Hara · Ayato Tsuboi · Naohiko Matsuda
 
 [Main result](#main-result) · [Verify the certificate](#verify-the-certificate) · [Reproduce the experiments](docs/REPRODUCE.md) · [Citation](CITATION.cff)
 
-![At d = 12, twelve two-atom heads use 24 head–atom terms, while an equivalent single-head representation needs at least 4096 atoms.](docs/figures/atom_cost.png)
+![At d = 12, twelve two-atom heads use 24 head–atom terms, while an equivalent single-head representation needs at least 4096 atoms.](docs/figures/atom_cost.gif)
+
+*One binary choice is expanded at each step. [Static figure](docs/figures/atom_cost.png).*
 
 ## Main result
 
