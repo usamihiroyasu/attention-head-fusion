@@ -1,0 +1,62 @@
+[
+  {
+    "source_relative": "controlled/SPEC.json",
+    "source_sha256": "82bb7600818ef7b5a33112a06d0a55ce460df5d746b765cff199c654bad12297",
+    "public_relative": "protocol_history/controlled/SPEC.json",
+    "public_sha256": "70cb3e55499e40c1892b9f673d9b47b99532e336dd0bbce15267bc0d7b5ba988",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  },
+  {
+    "source_relative": "learned/FROZEN_CONTRACT.json",
+    "source_sha256": "f447905b0dde8e050202aaf259a3393382771ca79be74ed5a48368cd03046199",
+    "public_relative": "protocol_history/learned/FROZEN_CONTRACT.json",
+    "public_sha256": "f0c93e564b79f115099ee0995b0d1896f480fd8a7d43894771df98272709c1d4",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  },
+  {
+    "source_relative": "learned/PROTOCOL_AMENDMENT2.json",
+    "source_sha256": "8c4cb88dfa07d509c9150cee47373c90c994a47afce77b2901ce8b81cc719b93",
+    "public_relative": "protocol_history/learned/PROTOCOL_AMENDMENT2.json",
+    "public_sha256": "cfa9c888017cca631d70aac5c1c057580754f7f1f188ab3b4598a41207b1bae4",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  },
+  {
+    "source_relative": "learned/PROTOCOL_AMENDMENT_SVD.json",
+    "source_sha256": "a4d369079dac6c1ffdd38dd6b79c1a5c691c8cd269de48c88264e8c1a8efff7c",
+    "public_relative": "protocol_history/learned/PROTOCOL_AMENDMENT_SVD.json",
+    "public_sha256": "cfe3661d549033a409e1272700bb5fc46af3c8ef802004e71b2d82d5275991b0",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  },
+  {
+    "source_relative": "calibration/FROZEN_CONTRACT.json",
+    "source_sha256": "bb159198e5284746d453cadab32b6a9d4b050713b27e8bbaab14f034f77a669d",
+    "public_relative": "protocol_history/calibration/FROZEN_CONTRACT.json",
+    "public_sha256": "bb159198e5284746d453cadab32b6a9d4b050713b27e8bbaab14f034f77a669d",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  },
+  {
+    "source_relative": "calibration/SECONDARY_NATIVE_CAPACITY_ANALYSIS.json",
+    "source_sha256": "344dd58ad7e2a9ead7836ebe9ce7e3b3113fc2acad892506513cbdbb2f2f21e9",
+    "public_relative": "protocol_history/calibration/SECONDARY_NATIVE_CAPACITY_ANALYSIS.json",
+    "public_sha256": "344dd58ad7e2a9ead7836ebe9ce7e3b3113fc2acad892506513cbdbb2f2f21e9",
+    "changes": [
+      "Scientific parameters unchanged; local paths normalized and administrative metadata omitted where applicable."
+    ],
+    "scientific_parameter_changes": false
+  }
+]
