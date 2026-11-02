@@ -1,0 +1,5 @@
+# Recorded CUDA environment; obtain the matching wheel from the upstream distribution.
+torch==2.11.0+cu128
+transformers==5.17.0
+peft==0.18.1
+numpy==2.5.2
