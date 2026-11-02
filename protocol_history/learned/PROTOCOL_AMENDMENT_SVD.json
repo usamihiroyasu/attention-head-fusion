@@ -1,0 +1,7 @@
+{
+  "version": "STRONG_NATIVE_APPROXIMATION_V2_AMENDMENT1",
+  "parent_contract_sha256": "f447905b0dde8e050202aaf259a3393382771ca79be74ed5a48368cd03046199",
+  "state": "APPROVED_INITIALIZER_AND_CLASSICAL_SVD_ANALYSIS_PRE_RUN",
+  "H4_initializer": "Root adopts fixed512withoutreplacement tuple candidates with frozen seeds",
+  "SVD_analysis": "Afterselectorfreeze, numericalFP64 centered-target tail floors for flatM4/8, sameuncenteredRMSdenominator. No newcondition; no exactrank or intervalcertification claim."
+}

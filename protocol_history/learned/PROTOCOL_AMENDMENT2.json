@@ -1,0 +1,6 @@
+{
+  "state": "PRE_RUN_AMENDMENT_NO_HELDOUT_READ",
+  "created_utc": "2026-11-01T07:08:01.233843+00:00",
+  "metrics": "Also report RMSE divided by centered heldtarget RMS as diagnostic; same SSE numerator. Degenerate centered denominator retained as undefined. No selection changes. Calibration-mean output baseline uses no heldout label/mean for prediction.",
+  "progress": "Atomic last-completed-step/loss progress at0/128/256/384/512; incomplete comparisons not admitted. No resumption or seed changes."
+}

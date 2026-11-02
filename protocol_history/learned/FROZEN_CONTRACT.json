@@ -1,0 +1,189 @@
+{
+  "version": "STRONG_NATIVE_APPROXIMATION_V2_H2_H4",
+  "state": "FROZEN_PROTOCOL_FOR_ROOT_REVIEW_NO_CAPTURE_OR_FIT_ADMITTED",
+  "recorded_utc": "2026-11-01T07:00:16.690107+00:00",
+  "purpose": "Finite native-query approximation comparison with equal allocated FP32 retained-cache bytes; not native-cache minimality, global learner optimality, language-model accuracy, or a new theoretical core.",
+  "assets": {
+    "checkpoint_hub": "zen-E/CODI-gpt2",
+    "revision": "fd641b3d3edc59e4f534b55588e906588c9e36bb",
+    "checkpoint_sha256": "fd223b14932b8b66605c2a688e7d7193058ff2b40b2c6f6c1547c227d06d8417",
+    "promptbank": "native/public_promptbank64.jsonl",
+    "promptbank_sha256": "cc86af666e773c956163d638f3a1a46b29091509ac5e28c940481128719497d3",
+    "model_gate": "Inherit strict251 keys/shapes/cast equality/tied weights and ordinary FP32 eager text-only path from admitted native protocol. Root pins new capture/worker hashes before GO. No alternative model/runtime."
+  },
+  "population": {
+    "prompts": "All64 frozen rows in unchanged order, no labels",
+    "tokens": "Same GPT2 tokenizer, first96 tokens",
+    "eligible": "T>=64; retain INELIGIBLE row otherwise; no replacement prompt",
+    "layer": 0,
+    "heads": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "prefix_positions": [
+      0,
+      16
+    ],
+    "calibration_query_positions": [
+      16,
+      48
+    ],
+    "heldout_query_positions": "48:T",
+    "maximum_native_forwards": 64,
+    "capture": "One QKV hook per prompt; retain native heads0:4. q_h is original64D query/8, K_h and raw V_h from prefix0:16. No c_proj call required for pre-W_O block outputs. Raw arrays remain in owned private dev1 run directory."
+  },
+  "target": {
+    "formula": "Y_H(q)=concat_h[softmax(q_h K_h^T)V_h] in R^(64H), H in{2,4}",
+    "query": "q=concat_h q_h, each already /8; no additional1/sqrt(64H) in any flat/fusion kernel",
+    "not_claimed": "No full12-head output, W_O image, growing causal cache, downstream accuracy, or target-dependent output projection."
+  },
+  "reference": {
+    "H2_native_KV_FP32_bytes": 16384,
+    "H4_native_KV_FP32_bytes": 32768,
+    "native_shapes": "K,V each[H,16,64]",
+    "H2_cartesian_shapes": "K,V each[256,128], unit masses;262144FP32bytes together",
+    "H2_rule": "Kij=concat(K0i,K1j), Vij=concat(V0i,V1j), unit masses",
+    "H2_identity_gate": "All cal and held queries:FP64 maxerr<=1e-9*(1+maxabs(Y));FP32<=2e-5*(1+maxabs(Y)); technical stop on failure",
+    "H4_rule": "Teacher is direct four-head block concatenation. The known product identity is algebraic background; no65536-atom K/V arrays or H4 numerical full-fusion check are required or claimed."
+  },
+  "retention": [
+    {
+      "H": 2,
+      "D": 128,
+      "n": 4,
+      "separate_atoms_per_head": 4,
+      "separate_total_atoms": 8,
+      "flat_atoms": 4,
+      "K_coefficients_per_arm": 512,
+      "V_coefficients_per_arm": 512,
+      "separate_bias_coefficients": 8,
+      "flat_bias_coefficients": 4,
+      "separate_array_bytes": 4128,
+      "flat_array_bytes": 4112,
+      "flat_unused_padding_bytes": 16,
+      "allocated_bytes_each": 4128
+    },
+    {
+      "H": 2,
+      "D": 128,
+      "n": 8,
+      "separate_atoms_per_head": 8,
+      "separate_total_atoms": 16,
+      "flat_atoms": 8,
+      "K_coefficients_per_arm": 1024,
+      "V_coefficients_per_arm": 1024,
+      "separate_bias_coefficients": 16,
+      "flat_bias_coefficients": 8,
+      "separate_array_bytes": 8256,
+      "flat_array_bytes": 8224,
+      "flat_unused_padding_bytes": 32,
+      "allocated_bytes_each": 8256
+    },
+    {
+      "H": 4,
+      "D": 256,
+      "n": 4,
+      "separate_atoms_per_head": 4,
+      "separate_total_atoms": 16,
+      "flat_atoms": 4,
+      "K_coefficients_per_arm": 1024,
+      "V_coefficients_per_arm": 1024,
+      "separate_bias_coefficients": 16,
+      "flat_bias_coefficients": 4,
+      "separate_array_bytes": 8256,
+      "flat_array_bytes": 8208,
+      "flat_unused_padding_bytes": 48,
+      "allocated_bytes_each": 8256
+    },
+    {
+      "H": 4,
+      "D": 256,
+      "n": 8,
+      "separate_atoms_per_head": 8,
+      "separate_total_atoms": 32,
+      "flat_atoms": 8,
+      "K_coefficients_per_arm": 2048,
+      "V_coefficients_per_arm": 2048,
+      "separate_bias_coefficients": 32,
+      "flat_bias_coefficients": 8,
+      "separate_array_bytes": 16512,
+      "flat_array_bytes": 16416,
+      "flat_unused_padding_bytes": 96,
+      "allocated_bytes_each": 16512
+    }
+  ],
+  "fairness": {
+    "counts": "Materialized FP32 K,V,b and flat uint8 unused padding. SeparateH normalizers, flat1. Total query dimension and output dimension64H both arms; each separate head accesses its64D query block/output block. No learned query/output map. SeparateHn atoms vs flatn is deliberate under equal retained coefficients/allocated bytes. K andV coefficient counts separately equal; positive log-mass counts differ.",
+    "excluded_from_retention": "Frozen original capture/reference, optimizer states, training workspace, query reconditioning statistics after folding, and transient inference activations; report these separately, not as zero cost.",
+    "training_compute": "Equal512 K/b updates,32cal queries,4starts per arm/budget; not equal FLOPs, wall time, ridge solve count, or number of normalizers."
+  },
+  "conditioning": {
+    "r_hj": "max(sqrt(mean_cal(q_hj^2)),1e-6), cal only, recomputed for native head0:4 once",
+    "x": "q/r, flat r=concat_h r_h",
+    "initial_transformed_keys": "Kprime=r*K_native (coordinatewise)",
+    "export_keys": "K_original=Kprime/r, not r*Kprime",
+    "output_scale": "s_H=max(sqrt(mean_cal_allD(Y_H^2)),1e-8), one scalar shared across arms for eachH; flag floor activation."
+  },
+  "objective": {
+    "N": 32,
+    "D": "64H",
+    "lambda": 1e-06,
+    "formula": "J=||AV-Y_H/s_H||F^2/(N*D)+lambda*||V||F^2/D; separate sums allH64D residual and value-norm terms using the sameD=64H denominator.",
+    "conditional_value_solution": "(A^T A + N*lambda I) V = A^T (Y/s), separately per head for separate; FP64 Cholesky, no pseudoinverse or alternate solver fallback.",
+    "gradient": "Envelope gradient: solve V exactly at current K,b, detach V for K,b autograd of normalized residual; the ridge term has no direct K,b derivative. Save stationarity residual; relative residual <=1e-8 using denominator max(1,||A^TY/s||F).",
+    "optimizer": "Adam on Kprime,b only:lr.03,betas(.9,.999),eps1e-8, no decay/clipping. FP64training.512updates/start;513conditionalVsolves per head (one before every update and final).",
+    "gauge": "After each update center every key coordinate across atoms and center b. Softmax stable logit subtraction. Store finite log masses b, whose exponentials are positive constants mathematically; do not prune or zero masses. No silent clipping/reinitialization."
+  },
+  "initialization": {
+    "starts": [
+      20261101,
+      20261102,
+      20261103,
+      20261104
+    ],
+    "rng": "NumPy PCG64 SeedSequence([base_start_seed,prompt_index,H,head_id,n]);head_id0:H for separate,head_idH for flat; four base seeds fixed. No adaptive draws.",
+    "pool": "Separate: all16 native keys/head, transformed bycalr. FlatH2:all256 Cartesian keys. FlatH4:512 distinct tuple indices sampled uniformly without replacement from[0,65536), using the predeclared per-start PCG64 stream; decode base16 to four prefix indices and materialize only those512 concatenated keys. This is an initialization candidate subset, not a support restriction on learned arbitrary keys.",
+    "kmeans": "kmeans++ squared Euclidean in transformed coordinates on the fixed candidate pool, first point uniform index; ties smallest index; zero distance sum chooses lowest unchosen index.20fixedLloyd updates; emptycenter retained. Assign ties lowest center; no heldout access.",
+    "bias": "b=log(cluster_count+1e-3), then centered. Values are always solved from cal targets, not cluster value averages."
+  },
+  "selection_and_export": {
+    "final_states": "Export every start after512updates: keys folded to original q, values multiplied by s, b centered; all castFP32, finite check, materialized arrays.",
+    "selector": "After512updates export all starts toFP32original-space keys/values/logmasses. Recompute calibration MSE withFP64kernel fromFP32arrays; choose lowestcalMSE, ties smallest startindex. Freeze selector JSON/hash for all64x2Hconditionsx2budgetsx2arms before heldout evaluation.",
+    "heldout": "Only after selector freeze evaluate selected starts and all4 final starts for transparency; never select/tune/restart using heldout. Head/layer/budget/seed/step changes prohibited."
+  },
+  "diagnostics": {
+    "ranks": "For eachH preserve caltarget uncentered/row-centered singular values per64Dhead and concatenatedD dimensions; calqueryrank<=32 and centeredtargetrank<=31, so D=128/256 alone does not imply independent task dimensions. Save each finalsoftmaxA rank. Effective rank singularvalue>1e-6*largest (rank0 iflargest0); no filtering.",
+    "ridge": "Record condition number of A^TA+NlambdaI, stationarity residual, J/residualMSE/ridge term, finite gradients/parameters, training loss checkpoints0,128,256,384,512.",
+    "compute": "Record walltime and actual perH/arm/budget/start updates plus value-solve counts/sizes. Count separateH vsflat1. Proxy terms:logits NMdkey, prediction NMdvalue, Gram NM^2,RHS NMdvalue,Cholesky O(M^3); labeledsymbolicproxy, not measuredhardwareFLOPs. Four starts are optimization repetitions, not IID datasets."
+  },
+  "evaluation": {
+    "primary": "Perprompt heldout NRMSE=sqrt(mean_allheldqueries_allD((pred-Y_H)^2))/sqrt(mean(Y_H^2)); denominatorheldreference, notcals_H. Equalpromptmacro;pairedDelta=flatNRMSE-separateNRMSE separatelyfor eachH,budget. H2primary;H4nestedmechanismreplication.",
+    "secondary": "Macro and median Delta, fraction Delta>0, method macro/median NRMSE, pooled raw RMSE, worst absolute error, cal/held gap, all4 starts and selected index. No best-heldout score.",
+    "degenerate": "If held target RMS<1e-8 retain raw metrics and mark normalized metric undefined; report counts and no silent dropping. Keep all64 row statuses.",
+    "uncertainty": "No IID prompt assertion, significance test, confidence interval, all-query supremum, best-possible-flat conclusion, NLP accuracy or end-to-end speedup."
+  },
+  "execution_gate": {
+    "before_any_run": "Root reviews contract/code and pins newcapture/worker/runtimehashes; freshprivateGPUidle/ownedlocks; hardGPUjob300s plus ownedcleanup. This protocol does not independently admit capture orfit. No timebasedarm-specificearlystopping.",
+    "counts": "64prompts*2H*2budgets*2arms*4starts*512=1048576 per-instanceK/bupdates. Batched64x4starts:8Harmbudgetconditions*512=4096batchedupdates. ConditionalVsolve513timesperhead/start;separate hasHvalue solves, flat1.",
+    "failure": "Stop job onload/hash/H2identity/nonfinite/Cholesky/stationarityfailure or300swallcap. Atomicpartialcheckpoints include completedsteps/inflight/selectorstate; retainall64/H/budgetstatuses. No retry/seedchange/fallback. If incomplete, do not claim full frozencomparison or pool unequal-step arms. No postdeadline salvage by selecting winning completedconditions."
+  },
+  "interpretation_gate": {
+    "weak_signal": "H2primary:separate lower thanflat in macro andmedianselected-startNRMSE atbothbudgets, withstartdispersion/degeneratecounts. H4 reports correspondingpredeclarednestedmechanismresult whether positive ornegative; it doesnotrescue a negativeH2primary result.",
+    "falsification": "If flat is no worse inH2macro atbothbudgets, primaryempiricaladvantage unsupported here; mixedmetrics/budgets aremixed. H4result alwaysreportedseparately. Neither localfittedsuccess norfailure provesnativecacheminimum orglobaloptimality.",
+    "kill": "After singlefrozen64bank/twoH/twobudget/fourstart run stop; nohead/layer/seed/stepchanges afterheldout. Technicalfailure or300scap yieldsincompleteasset, notpositivechasing.",
+    "remaining_asset": "Public reproducible finite-budget cache-fitting protocol, strict resource ledger, full128D capture metadata, all start curves, heldout results, and controlled failure evidence; one existing paper only."
+  },
+  "pre_execution_amendment": "H4 mechanism replication added before code generation/capture/fitting/heldout evaluation; original H2-only draft preserved as superseded. Root approval of final implementation/run remains required.",
+  "head_conditions": {
+    "H": [
+      2,
+      4
+    ],
+    "head_ids": "0:H",
+    "primary": "H2 is the predeclared primary direct comparison; H4 is a predeclared nested-head mechanism replication, not independent replication or an alternative chosen after results. Both budgets reported for each H.",
+    "output_dimension": "D=64H",
+    "same_capture": "AllH2/H4 conditions use same64 text forwards and native heads0:4; no extra prompt/model cohort."
+  }
+}
