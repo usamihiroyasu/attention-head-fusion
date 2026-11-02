@@ -1,0 +1,9 @@
+{
+  "state": "SECONDARY_CAPACITY_ANALYSIS_FIXED_BEFORE_ROOT_READS_NEW_RESULTS",
+  "utc": "2026-11-01T07:24:36.628097+00:00",
+  "motivation": "Posthoc original64 numerical centeredSVD floor atM16 exceedszero onall64; exactreference separate native2heads16prefix each uses16384B, anydenseflat16atomKV also16384B and receives64additionalfreebiasbytes. This is classicalaffinerank support, not a newtheorycore.",
+  "newcohort_fixed_readout": "Use early32calibration queries only, originalnative2headteacher, M16 affinefloor norm(centeredsv[15:])/norm(uncenteredsv). Newcommonheldonly16queries hascenteredrank<=15, so cannotgiveM16rankwitness. Do not claim apositiveheldfloor there.",
+  "observations_so_far": "Root has NOT read new64 calibrationSVD or fitted/outcomeJSON. Coveragecapturecomplete and fittinginprogress. Thissecondaryanalysis isaddedafteroriginaloutcomes,notpretendedoriginalpreregistration.",
+  "resource_model": "ExplicitdenseFP32K/Vrecords; grantflatpositiveconstantmasses/logbiasesfree (64Bextra) forastrongercomparison. NativeKV4096floats=16KiB, flat16KV4096floats=16KiB; atomsnotbits/generalstructuredmemory.",
+  "report": "All64newcalbank floors/min/mean and2headidentityfloatingprecision. NumericalFP64SVDwithreconstructionresidual; nointervalcertification/exactrankclaim. Retainalloriginalmixedfits."
+}

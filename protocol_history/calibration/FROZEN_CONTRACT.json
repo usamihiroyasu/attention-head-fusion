@@ -1,0 +1,26 @@
+{
+  "version": "CALIBRATION_POLICY_FOLLOWUP_V1",
+  "state": "FROZEN_BEFORE_NEW_ASSET_CAPTURE_AND_OUTCOMES; CODE_REVIEW_REQUIRED_FOR_GO",
+  "frozen_utc": "2026-11-01T07:17:45.498669+00:00",
+  "scope_deadline_utc": "2026-11-01T07:36:00Z",
+  "reason": "Original H2n4 reversal and calibration-selected outlier (context30 NRMSE2.2086 versus starts.494,.393,1.290) motivate a calibration-policy comparison; not an attempt to overwrite originalMIXED result.",
+  "new_population": "Next64 BoolQvalidation IDs in original label-independent SHA256 row ranking; revision35b264d03638db9f4ce671b711558bf7ff0f80d5; strictdisjoint original64 row/id/textSHA; freezebeforeanycapture/outcome. Publicinputs only.",
+  "native": "SamebyteverifiedCODIgpt2/strict251sameprivate runtime,ordinarytext,lastlayer0heads0:2,prefix16,T<=96 andT>=64. Max64 forwards.",
+  "question": "Does distributing the same32calibration queries across the pretest segment reduce error/initialization instability on a common future-heldout bank? This is a calibration-policy intervention including its calibration-dependent preprocessing, not pure latent/architecture causal identification.",
+  "split": {
+    "test": "final16positions[T-16:T], identical acrosspolicies",
+    "earlycal": "positions16..47 (32)",
+    "coveragecal": "positions16+floor(j*(T-33)/31),j=0..31;includesendpoints16,T-17,unique",
+    "short": "T64 makes policiesidentical; retaincase,reportcount;no replacement orlengthtuning"
+  },
+  "fit": "H2,n4/8,separate/flat;sameold512updates,4seeds20261101..4,lr.03,lambda1e-6,FP64varpro andFP32export;policyexcludedfromseed;caldependentr/s/kmeanssamealgorithm;equal4128/8256allocatedbytesperarm;noadditionalregularizer/hyperparameter/epochsearch.",
+  "selection": "All8policy/budget/arm selectors freeze before anytesttarget/SVD/error. SamecalMSEselector. Allstartsandallcontextsreported.",
+  "primary": "Fourfixed contrasts: macroheldNRMSEcoverage-minus-early for eachn4/8xseparate/flat. Coverage-benefitweak signal requiresall4<0; mixedotherwise.",
+  "secondary": "Pairedpromptmedianerrors,worstcontextNRMSE,startdispersion andcal-heldgap;normalizerrankingforeachpolicyincludingnull/negative. Original64 resultremainsdiscovery,notpooledasIIDreplication.",
+  "diagnostic": "Read-only nearestcosinedistance ofheldqtoeachcalbank;fixednativeqcoordinate (no heldnormalization). Calibration policy changes bothquerycoverageandfitpreprocessing, so do not isolatea singlemechanismfromthis alone.",
+  "identity": "SameH2fullCartesianidentitygate oncal andtest. testread only afterselectorfreeze.",
+  "resources": "Eachnewcapture/fitlearnjob freshidle/ownedlocks/300sworker/360sclient/cleanup;source+filehash frozenandrootGO. No sharedservicerestart/install/foreignprocess.",
+  "kill": "Onefresh64bank/twocalibrationpolicies only. IfnoimprovementorMIXED retainit,donottryotherlayers/models/starts/regularizers/splits toforceawin. Timeout/connectretry0.",
+  "remaining_assets": "Frozenadditionalquerybank,calibration-policycode/results/selectiondiagnostics;oneexistingpaper,notnewpapercount.",
+  "original_result_sha256": "38d72d4f82057579aade84517a14d1d391827b2295dcc3c2befa311181f9213a"
+}
